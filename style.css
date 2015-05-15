@@ -1,0 +1,87 @@
+body{
+	background-color: #F3F3F3;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-color: #FFFFFF;
+    display: block;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+	box-shadow: 0px 5px 3px #aeaeae;
+}
+
+#leftpane {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    overflow: auto;
+}
+
+#rightpane {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 306px /* 200 + 6*/;
+    right: 0;
+    overflow: hidden;
+}
+
+#toppane {
+    position: absolute;
+    top: 0;
+    bottom: 106px; /* 130 + 6 */
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+#bottompane {
+	background-color: #E8E8E8;
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+/* Vertical Resizer */
+#vResizer{
+	background-color: #CECECE;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 300px;
+    width: 6px;
+    cursor: e-resize;
+}
+
+/* Horizontal Resizer */
+#hResizer {
+	background-color: #CECECE;
+    position: absolute;
+    height: 6px;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    cursor: n-resize;
+}
+
+#vResizer:hover, #hResizer:hover {
+	background-color: #AAA;
+}
+
+h6{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	text-indent: 10px;
+	margin: 10px 0;
+}
