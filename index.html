@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="scc">
+<head>
+	
+	<meta charset="utf-8" />
+    <title>AngularJS Resizer</title>
+    
+	<link href="assets/css/style.css" rel="stylesheet" />
+    
+	<!-- Libraries -->
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+	
+	<!-- Angular scripts -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/resizer.js"></script>
+	
+</head>
+
+<body ng-controller="MainCtrl">
+	
+	<!-- Header starts here -->
+	<header>
+	
+	</header>
+	<!-- Header ends here -->
+	
+	<!-- Left space starts here -->
+  	<div id="leftpane">
+  		<h6>Left Space</h6>
+  	</div>
+	<!-- Left space ends here -->
+	
+	<!-- Vertical Resizer -->
+	<div id="vResizer" resizer="vertical" resizer-width="6" resizer-left="#leftpane" resizer-right="#rightpane" resizer-min="200" resizer-max="600"></div>
+	
+	<!-- Right space starts here -->
+	<div id="rightpane">
+		
+		<!-- Top space starts here -->
+		<div id="toppane">
+			<h6>Main workspace</h6>
+		</div>
+		<!-- Top space ends here -->
+		
+		<!-- Horizontal Resizer -->
+		<div id="hResizer" resizer="horizontal" resizer-height="6" resizer-top="#toppane" resizer-bottom="#bottompane" resizer-min="100" resizer-max="300"></div>
+		
+		<!-- Bottom space starts here -->
+  		<div id="bottompane">
+			<h6>Bottom Space</h6>
+		</div>
+		<!-- Bottom space ends here -->
+		
+  	</div>
+  	<!-- Right space ends here -->
+	
+</body>
+</html>
