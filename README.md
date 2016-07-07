@@ -23,3 +23,8 @@ Create a horizontal resizer as below in your HTML:
 <pre>
 &lt;div resizer="horizontal" resizer-height="6" resizer-top="#toppane" resizer-bottom="#bottompane" resizer-min="100" resizer-max="300">&lt;/div>
 </pre>
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/kanthvallampati/angular_resizer/badge.svg?style=beer-square)](https://beerpay.io/kanthvallampati/angular_resizer)  [![Beerpay](https://beerpay.io/kanthvallampati/angular_resizer/make-wish.svg?style=flat-square)](https://beerpay.io/kanthvallampati/angular_resizer?focus=wish)
