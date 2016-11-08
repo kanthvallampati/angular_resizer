@@ -1,25 +1,20 @@
 angular.module('ng.resizer', []).directive('resizer', function($document) {
-
 	return function($scope, $element, $attrs) {
 
 		$element.on('mousedown', function(event) {
 			event.preventDefault();
-
 			$document.on('mousemove', mousemove);
 			$document.on('mouseup', mouseup);
 		});
 
 		function mousemove(event) {
 			
-			// Handles vertical resizer
-			if ($attrs.resizer == 'vertical') {	
-				
+			if ($attrs.resizer == 'vertical') {	// Handles vertical resizer
 				var x = event.pageX;
 
 				if ($attrs.resizerMax && x > $attrs.resizerMax) {
 					x = parseInt($attrs.resizerMax);
 				}
-				
 				if ($attrs.resizerMin && x < $attrs.resizerMin) {
 					x = parseInt($attrs.resizerMin);
 				}
@@ -35,14 +30,12 @@ angular.module('ng.resizer', []).directive('resizer', function($document) {
 					left: (x + parseInt($attrs.resizerWidth)) + 'px'
 				});
 
-			} else {	// Handle horizontal resizer									
-				
+			} else if ($attrs.resizer == 'horizontal') {	// Handle horizontal resizer									
 				var y = window.innerHeight - event.pageY;
 				
 				if ($attrs.resizerMax && y > $attrs.resizerMax) {
 					y = parseInt($attrs.resizerMax);
 				}
-				
 				if ($attrs.resizerMin && y < $attrs.resizerMin) {
 					y = parseInt($attrs.resizerMin);
 				}
@@ -50,7 +43,6 @@ angular.module('ng.resizer', []).directive('resizer', function($document) {
 				$element.css({
 					bottom: y + 'px'
 				});
-
 				$($attrs.resizerTop).css({
 					bottom: (y + parseInt($attrs.resizerHeight)) + 'px'
 				});
